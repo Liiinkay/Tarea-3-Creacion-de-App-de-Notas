@@ -1,0 +1,33 @@
+<ul>
+    <div class="NotasBox">
+        <li *ngFor="let item of lista1"> 
+            <div class="NotasBoxAbierto">
+                <p>{{item.titulo}}</p>
+                <p>{{item.descripcion}}</p>
+                <button (click)="EliminarDatos(item.titulo)">X</button>
+            </div>
+        </li>
+    </div>
+    <div class="NotasBox">
+        <li *ngFor="let item of lista2"> 
+            <div class="NotasBoxProceso">
+                <p>{{item.titulo}}</p>
+                <p>{{item.descripcion}}</p>
+                <button (click)="EliminarDatos(item.titulo)">X</button>
+            </div>
+        </li>
+    </div>
+    <div class="NotasBox">
+        <li *ngFor="let item of lista3"> 
+             <div class="NotasBoxCerrado">
+                <p>{{item.titulo}}</p>
+                <p>{{item.descripcion}}</p>
+                <button (click)="EliminarDatos(item.titulo)">X</button>
+            </div>
+        </li>
+    </div>
+
+</ul>
+<footer>
+    <a [routerLink]="['/']" routerLinkActive="router-link-active" ><button type="submit">Adicionar</button></a> 
+</footer>

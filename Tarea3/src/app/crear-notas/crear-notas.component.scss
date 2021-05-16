@@ -1,0 +1,20 @@
+*{
+    font-family: 'Poppins',sans-serif;
+}
+ul{
+    list-style: none;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 15px;
+}
+
+.containerForm{
+    background-color: #ffff;
+    width: 100%;
+    max-width: 700px;
+    padding: 20px 30px;
+}

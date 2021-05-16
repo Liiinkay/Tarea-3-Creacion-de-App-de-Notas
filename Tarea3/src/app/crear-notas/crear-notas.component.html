@@ -1,0 +1,27 @@
+<body>
+    <div class="containerForm">
+        <form [formGroup]="formulario" (ngSubmit)="EnviarDatos()">
+            <ul>
+                <li>
+                    <label>Titulo</label>
+                    <input type="text" formControlName="titulo" placeholder="titulo" required>
+                </li>
+                <li>
+                    <label>Estado</label>
+                    <select formControlName="estado" required>
+                        <option value="1">Abierto</option>
+                        <option value="2">En Proceso</option>
+                        <option value="3">Cerrado</option>
+                    </select>
+                </li>
+                <li>
+                    <label>Descripcion</label>
+                    <textarea id="descripcion" formControlName="descripcion" required maxlength="150"></textarea>
+                </li>
+                    <li>
+                        <button  type="submit" >Actualizar</button>
+                    </li>  
+            </ul>
+        </form>
+    </div>
+</body>

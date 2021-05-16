@@ -1,0 +1,39 @@
+ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.NotasBox{
+    width:300px ;
+}
+
+.NotasBoxAbierto{
+    background-color: green;
+    margin: 4%;
+    border-width:3px;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+.NotasBoxProceso{
+    background-color: yellow;
+    margin: 4%;
+    border-width:3px;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+.NotasBoxCerrado{
+    background-color: red;
+    margin: 4%;
+    border-width:3px;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
