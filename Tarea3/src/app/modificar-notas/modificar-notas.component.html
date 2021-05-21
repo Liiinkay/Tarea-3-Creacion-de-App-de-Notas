@@ -1,0 +1,38 @@
+<form [formGroup]="formulario" (ngSubmit)="ModificarDatos()">
+    <ul>
+        <li>
+            <mat-form-field appearance="fill">
+                <mat-label>Nota a Modificar</mat-label>
+                <mat-select>
+                    <mat-option value="1">xD</mat-option>
+                    <mat-option value="2">xD</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </li>
+        <li>
+            <mat-form-field appearance="fill">
+                <mat-label>Titulo</mat-label>
+                <input formControlName="titulo" matInput>
+            </mat-form-field>
+        </li>
+        <li>
+            <mat-form-field  appearance="fill">
+                <mat-label>Estados</mat-label>
+                <mat-select formControlName="estado">
+                    <mat-option value="1">Abierto</mat-option>
+                    <mat-option value="2">En Proceso</mat-option>
+                    <mat-option value="3">Cerrado</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </li>
+        <li>
+            <mat-form-field appearance="fill">
+                <mat-label>Descripcion</mat-label>
+                <textarea formControlName="descripcion" matInput></textarea>
+            </mat-form-field>
+        </li>
+        <li>
+            <button type="submit" mat-raised-button>Actualizar</button>
+        </li>
+    </ul>
+</form>

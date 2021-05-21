@@ -7,18 +7,30 @@ import { CrearNotasComponent } from './crear-notas/crear-notas.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MostrarNotasComponent } from './mostrar-notas/mostrar-notas.component';
+import { ModificarNotasComponent } from './modificar-notas/modificar-notas.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
     AppComponent,
     CrearNotasComponent,
-    MostrarNotasComponent
+    MostrarNotasComponent,
+    ModificarNotasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
