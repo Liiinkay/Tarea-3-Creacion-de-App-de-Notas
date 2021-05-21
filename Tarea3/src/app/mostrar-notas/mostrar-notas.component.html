@@ -1,34 +1,43 @@
-<ul>
-    <div class="NotasBox">
-        <li *ngFor="let item of lista1"> 
-            <div class="NotasBoxAbierto">
-                <p>{{item.titulo}}</p>
-                <p>{{item.descripcion}}</p>
-                <button (click)="EliminarDatos(item.titulo)">X</button>
+<body>
+    <div class="containerMN">
+        <div class="textoNotas"><h2>NOTAS</h2></div>
+        <ul>
+            <div class="NotasBox">
+                <li *ngFor="let item of lista1"> 
+                    <div class="NotasBoxAbierto">
+                        <p class="textoTitulo">{{item.titulo}}</p>
+                        <mat-divider></mat-divider>
+                        <p class="textoDescripcion">{{item.descripcion}}</p>
+                        <button (click)="EliminarDatos(item.titulo)">X</button>
+                    </div>
+                </li>
             </div>
-        </li>
-    </div>
-    <div class="NotasBox">
-        <li *ngFor="let item of lista2"> 
-            <div class="NotasBoxProceso">
-                <p>{{item.titulo}}</p>
-                <p>{{item.descripcion}}</p>
-                <button (click)="EliminarDatos(item.titulo)">X</button>
+            <div class="NotasBox">
+                <li *ngFor="let item of lista2"> 
+                    <div class="NotasBoxProceso">
+                        <p class="textoTitulo">{{item.titulo}}</p>
+                        <mat-divider></mat-divider>
+                        <p class="textoDescripcion">{{item.descripcion}}</p>
+                        <button (click)="EliminarDatos(item.titulo)">X</button>
+                    </div>
+                </li>
             </div>
-        </li>
-    </div>
-    <div class="NotasBox">
-        <li *ngFor="let item of lista3"> 
-             <div class="NotasBoxCerrado">
-                <p>{{item.titulo}}</p>
-                <p>{{item.descripcion}}</p>
-                <button (click)="EliminarDatos(item.titulo)">X</button>
+            <div class="NotasBox">
+                <li *ngFor="let item of lista3"> 
+                     <div class="NotasBoxCerrado">
+                        <p class="textoTitulo">{{item.titulo}}</p>
+                        <mat-divider></mat-divider>
+                        <p class="textoDescripcion">{{item.descripcion}}</p>
+                        <button (click)="EliminarDatos(item.titulo) ">X</button>
+                    </div>
+                </li>
             </div>
-        </li>
+        
+        </ul>
+        <footer>
+            <a [routerLink]="['/']" routerLinkActive="router-link-active" ><button type="submit" mat-raised-button>Adicionar</button></a>
+            <a [routerLink]="['/modificar-notas']" routerLinkActive="router-link-active" ><button type="submit" mat-raised-button>Modificar</button></a>  
+        </footer>
     </div>
-
-</ul>
-<footer>
-    <a [routerLink]="['/']" routerLinkActive="router-link-active" ><button type="submit">Adicionar</button></a>
-    <a [routerLink]="['/modificar-notas']" routerLinkActive="router-link-active" ><button type="submit">Modificar</button></a>  
-</footer>
+    
+</body>

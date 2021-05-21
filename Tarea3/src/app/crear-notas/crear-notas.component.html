@@ -1,33 +1,37 @@
 <body>
-    <div class="containerForm">
-        <form [formGroup]="formulario" (ngSubmit)="EnviarDatos()">
-            <ul>
-                <li>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Titulo</mat-label>
-                        <input formControlName="titulo" matInput>
-                    </mat-form-field>
-                </li>
-                <li>
-                    <mat-form-field  appearance="fill">
-                        <mat-label>Estados</mat-label>
-                        <mat-select formControlName="estado">
-                            <mat-option value="1">Abierto</mat-option>
-                            <mat-option value="2">En Proceso</mat-option>
-                            <mat-option value="3">Cerrado</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </li>
-                <li>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Descripcion</mat-label>
-                        <textarea formControlName="descripcion" matInput></textarea>
-                    </mat-form-field>
-                </li>
-                <li>
-                    <button type="submit" mat-raised-button>Actualizar</button>
-                </li>  
-            </ul>
-        </form>
+    <div class="container1">
+        <div class="textoNotas"><h1>AGREGAR NOTA</h1></div>
+        <div class="containerForm">
+            <form [formGroup]="formulario" (ngSubmit)="EnviarDatos()" ngNativeValidate>
+                <ul>
+                    <li>
+                        <mat-form-field class="controls" appearance="fill">
+                            <mat-label>Titulo</mat-label>
+                            <input  formControlName="titulo" matInput required>
+                        </mat-form-field>
+                    </li>
+                    <li>
+                        <mat-form-field class="controls" appearance="fill">
+                            <mat-label>Estados</mat-label>
+                            <mat-select  formControlName="estado" required>
+                                <mat-option value="1">Abierto</mat-option>
+                                <mat-option value="2">En Proceso</mat-option>
+                                <mat-option value="3">Cerrado</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </li>
+                    <li>
+                        <mat-form-field class="controls" appearance="fill">
+                            <mat-label>Descripcion</mat-label>
+                            <textarea formControlName="descripcion" matInput required></textarea>
+                        </mat-form-field>
+                    </li>
+                    <li>
+                        <button type="submit" mat-raised-button>Actualizar</button>
+                    </li>  
+                </ul>
+            </form>
+        </div>
     </div>
+    
 </body>

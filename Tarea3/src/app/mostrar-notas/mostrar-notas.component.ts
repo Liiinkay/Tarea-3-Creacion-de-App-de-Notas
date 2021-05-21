@@ -47,20 +47,6 @@ export class MostrarNotasComponent implements OnInit {
       }
     }
   }
-
-  ModificarDatos(titulo:string){
-    console.log(titulo);
-      for(let i=0;i<this.lista.length;i++){
-        if(this.lista[i].titulo==titulo){
-          
-          this.IndexNota[0].titulo=i.toString();
-          this.IndexNota[1]=this.lista[i];
-          this.servicio.ModificarDatos(this.IndexNota).subscribe(datos=>{
-          console.log(datos);
-        })
-      }
-    }
-  }
 }
 
 

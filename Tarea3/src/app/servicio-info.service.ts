@@ -7,6 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ServicioInfoService {
+  // Aca va la url hacia el backend, yo lo tengo asi, ya que en mi caso tenia una 
+  // carpeta llamada Backend en httdocs del Xampp.
   url:string="http://localhost/Backend/";
   constructor(private servicio:HttpClient) { }
 
